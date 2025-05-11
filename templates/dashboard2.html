@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard2.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="navbar">
+    </div>
+
+    <div class="header-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="AirSync Logo" class="logo">
+        <h1 class="tagline">Air, Sync, Done.</h1>
+    </div>
+
+    <button class="reset-btn" onclick="resetData()">Reset</button>
+
+    <table id="seatTable">
+        <thead>
+            <tr>
+                <th>Table No</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard2.js') }}"></script>
+</body>
+</html>
